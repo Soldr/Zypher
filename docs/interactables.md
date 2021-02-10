@@ -26,7 +26,7 @@ Section:Create(
 A simple button
 
 ```lua
-Section:Create(
+local Btn = Section:Create(
 	"Button",
 	"Button", -- The name of the button
 	function()
@@ -40,12 +40,18 @@ Section:Create(
 )
 ```
 
+You can modify the button's text
+
+```lua
+Btn:SetButtonText("This changes the button text!")
+```
+
 ### Toggle
 
 A on/off switch
 
 ```lua
-Section:Create(
+local Toggle = Section:Create(
 	"Toggle",
 	"Toggle", -- The name of the toggle
 	function(v)
@@ -57,6 +63,12 @@ Section:Create(
 		default = true -- Default state
 	}
 )
+```
+
+You can change the toggle's state
+
+```lua
+Toggle:ChangeState(true) -- state
 ```
 
 ### Slider
@@ -131,7 +143,7 @@ Section:Create(
 For listing things that can be chosen from, or just listing things
 
 ```lua
-Section:Create(
+local Drop = Section:Create(
 	"Dropdown",
 	"Dropdown", -- The name of the dropdown
 	function(v)
@@ -153,12 +165,22 @@ Section:Create(
 )
 ```
 
+Dropdown list options can be changed
+
+```lua
+Drop:SetDropDownList({
+	"opt1",
+	"opt2",
+	"etc"
+})
+```
+
 ### Color Picker
 
 Pick a color!
 
 ```lua
-Section:Create(
+locl Picker = Section:Create(
 	"Colorpicker",
 	"Color picker", -- The name of the color picker
 	function(color)
@@ -172,13 +194,25 @@ Section:Create(
 )
 ```
 
+You can also set the color of the color picker
+
+```lua
+Picker:SetColor(Color)
+```
+
 ### Textlabel
 
 Well, a label
 
 ```lua
-Section:Create(
+local Text = Section:Create(
 	"Textlabel",
 	"Textlabel" -- The text for the label
 )
+```
+
+You can change the text of the label
+
+```lua
+Text:SetText("abc")
 ```

@@ -3,8 +3,6 @@ site_name: Zypher UI Library Documentation (Unofficial)
 theme:
   name: 'material'
   custom_dir: 'theme'
-  favicon: images/favicon.png
-  logo: assets/logo.png
   palette:
     primary: 'white'
     accent: 'gray'
