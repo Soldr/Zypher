@@ -1,0 +1,22 @@
+:root > * {
+    --md-code-hl-generic-color: #0FF1CE;
+    --md-code-hl-comment-color: #b9b9b9;
+    --md-code-hl-name-color: #6698CB;
+    --md-code-hl-string-color: #99CC99;
+    --md-code-hl-operator-color: #66CCCC;
+    --md-code-hl-punctuation-color: #FFFFFF;
+    --md-default-fg-color: #FF0000;
+}
+
+
+.md-typeset__table {
+    color: black !important;
+}
+
+thead {
+    background-color: #424242;
+}
+
+.md-typeset table:not([class]) {
+    border-radius: 5px;
+}
