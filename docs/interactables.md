@@ -128,10 +128,6 @@ Section:Create(
 		print('Key pressed!')
 	end,
 	{
-		-- Required
-		min = 0, -- Smallest value on the slider
-		max = 128, -- Largest value on the slider
-		
 		-- Optional
 		default = Enum.KeyCode.X
 	}
