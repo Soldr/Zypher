@@ -1,0 +1,29 @@
+site_name: Zypher UI Library Documentation (Unofficial)
+
+theme:
+  name: 'material'
+  custom_dir: 'theme'
+  favicon: images/favicon.png
+  logo: assets/logo.png
+  palette:
+    primary: 'white'
+    accent: 'gray'
+
+extra_css:
+  - stylesheets/dark_theme.css
+  - stylesheets/codehilite.css
+  - stylesheets/styles.css
+
+markdown_extensions:
+  - meta
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.keys
+  - attr_list
+
+plugins:
+  - search
+
+nav:
+  - Basics: index.md
+  - Interactables: interactables.md
