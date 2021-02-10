@@ -431,7 +431,7 @@
 </code></pre></div>
 <h3 id="button">Button</h3>
 <p>A simple button</p>
-<div class="highlight"><pre><span></span><code><span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">Btn</span> <span class="o">=</span> <span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
     <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Button&quot;</span><span class="p">,</span> <span class="c1">-- The name of the button</span>
     <span class="kr">function</span><span class="p">()</span>
@@ -444,9 +444,12 @@
     <span class="p">}</span>
 <span class="p">)</span>
 </code></pre></div>
+<p>You can modify the button's text</p>
+<div class="highlight"><pre><span></span><code><span class="n">Btn</span><span class="p">:</span><span class="n">SetButtonText</span><span class="p">(</span><span class="s2">&quot;This changes the button text!&quot;</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="toggle">Toggle</h3>
 <p>A on/off switch</p>
-<div class="highlight"><pre><span></span><code><span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">Toggle</span> <span class="o">=</span> <span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
     <span class="s2">&quot;Toggle&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Toggle&quot;</span><span class="p">,</span> <span class="c1">-- The name of the toggle</span>
     <span class="kr">function</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
@@ -458,6 +461,9 @@
         <span class="n">default</span> <span class="o">=</span> <span class="kc">true</span> <span class="c1">-- Default state</span>
     <span class="p">}</span>
 <span class="p">)</span>
+</code></pre></div>
+<p>You can change the toggle's state</p>
+<div class="highlight"><pre><span></span><code><span class="n">Toggle</span><span class="p">:</span><span class="n">ChangeState</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="c1">-- state</span>
 </code></pre></div>
 <h3 id="slider">Slider</h3>
 <p>A slippery value selector</p>
@@ -516,7 +522,7 @@
 </code></pre></div>
 <h3 id="dropdown">Dropdown</h3>
 <p>For listing things that can be chosen from, or just listing things</p>
-<div class="highlight"><pre><span></span><code><span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">Drop</span> <span class="o">=</span> <span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
     <span class="s2">&quot;Dropdown&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Dropdown&quot;</span><span class="p">,</span> <span class="c1">-- The name of the dropdown</span>
     <span class="kr">function</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
@@ -537,9 +543,16 @@
     <span class="p">}</span>
 <span class="p">)</span>
 </code></pre></div>
+<p>Dropdown list options can be changed</p>
+<div class="highlight"><pre><span></span><code><span class="n">Drop</span><span class="p">:</span><span class="n">SetDropDownList</span><span class="p">({</span>
+    <span class="s2">&quot;opt1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;opt2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;etc&quot;</span>
+<span class="p">})</span>
+</code></pre></div>
 <h3 id="color-picker">Color Picker</h3>
 <p>Pick a color!</p>
-<div class="highlight"><pre><span></span><code><span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="n">locl</span> <span class="n">Picker</span> <span class="o">=</span> <span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
     <span class="s2">&quot;Colorpicker&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Color picker&quot;</span><span class="p">,</span> <span class="c1">-- The name of the color picker</span>
     <span class="kr">function</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
@@ -552,12 +565,18 @@
     <span class="p">}</span>
 <span class="p">)</span>
 </code></pre></div>
+<p>You can also set the color of the color picker</p>
+<div class="highlight"><pre><span></span><code><span class="n">Picker</span><span class="p">:</span><span class="n">SetColor</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="textlabel">Textlabel</h3>
 <p>Well, a label</p>
-<div class="highlight"><pre><span></span><code><span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">Text</span> <span class="o">=</span> <span class="n">Section</span><span class="p">:</span><span class="n">Create</span><span class="p">(</span>
     <span class="s2">&quot;Textlabel&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Textlabel&quot;</span> <span class="c1">-- The text for the label</span>
 <span class="p">)</span>
+</code></pre></div>
+<p>You can change the text of the label</p>
+<div class="highlight"><pre><span></span><code><span class="n">Text</span><span class="p">:</span><span class="n">SetText</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
 </code></pre></div>
                 
               
