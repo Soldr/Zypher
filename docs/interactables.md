@@ -176,7 +176,7 @@ Drop:SetDropDownList({
 Pick a color!
 
 ```lua
-locl Picker = Section:Create(
+local Picker = Section:Create(
 	"Colorpicker",
 	"Color picker", -- The name of the color picker
 	function(color)
